@@ -9,12 +9,12 @@ function App() {
 
   const passwordgen = useCallback(() => {
     let pass = "";
-    let string = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
     if (charactor) str += "012345789";
     if (symbol) str += "~!@#$%&*()_+";
 
-    for (let i = 1; i <= array; i++) {
+    for (let i = 1; i <= length; i++) {
       let char = Math.floor(Math.randon() * str.length + 1);
       pass = str.charAt(char);
     }
@@ -33,7 +33,6 @@ function App() {
             placeholder='"Password'
             readOnly
           />
-          </div>
         </div>
       </div>
     </>
